@@ -14,6 +14,14 @@ Um banco de dados relacional (MySQL) é utilizado para garantir consultas mais c
 
 Casos de uso: Bancos relacionais são vantajosos quando se deseja realizar consultas complexas envolvendo junções de tabelas (ex.: cruzar os sintomas com o diagnóstico final em grandes conjuntos de dados).
 
+## Justificativa da Escolha do Modelo NOSQL
+
+Flexibilidade na Estrutura dos Dados
+
+Exemplo: O histórico médico de um animal pode ter informações variáveis de consultas, sintomas e tratamentos, algo que pode ser armazenado em um único documento JSON, adaptando-se a diferentes animais e situações sem a necessidade de remodelar o banco de dados.
+
+## 2. Alta Escalabilidade
+O modelo NoSQL é projetado para lidar com grandes volumes de dados, o que é útil em um sistema que armazena históricos médicos de vários animais ao longo do tempo. A capacidade de escalar horizontalmente, distribuindo dados entre múltiplos servidores, garante que o sistema possa crescer conforme a clínica expande e novos dados sejam adicionados.
 
 ## c. Modelos de Exemplos para Modelo Relacional
 Modelo Relacional (MySQL):
@@ -22,8 +30,37 @@ Para um banco de dados relacional, seria interessante um esquema que divida as i
 
 <img width="458" alt="disease1" src="https://github.com/user-attachments/assets/2a6361bb-bc83-448e-8e33-818f7b94a945">
 
+Modelo NOSQL(MongoDB):
+## Documento de exemplo no MongoDB:
+
+{
+  "animal_id": "A12345",
+  "nome": "Rex",
+  "especie": "Cachorro",
+  "raca": "Pastor Alemão",
+  "idade": 5,
+  "historico_medico": [
+    {
+      "data": "2024-07-01",
+      "sintomas": ["tosse", "febre"],
+      "diagnostico": "Infecção respiratória",
+      "tratamento": "Antibiótico",
+      "veterinario": "Dr. João"
+    },
+    {
+      "data": "2023-05-14",
+      "sintomas": ["prurido"],
+      "diagnostico": "Alergia",
+      "tratamento": "Anti-histamínico",
+      "veterinario": "Dra. Maria"
+    }
+  ]
+}
+
 ## d. Exemplos de Manipulação de Dados no Banco Escolhido
-Relacional (MySQL):
+
+## Relacional (MySQL):
+
 Exemplo de consultas e manipulação de dados em MySQL:
 **(código)**
 
@@ -36,5 +73,31 @@ Exemplo de consultas e manipulação de dados em MySQL:
 <img width="699" alt="disease3" src="https://github.com/user-attachments/assets/6b7c1fad-c9e0-41be-951b-1a6c7a210ebd">
 
 
-## e. Justificativa para Escolha de Data Lake
-Data Lake: Um Data Lake pode ser útil se os dados forem armazenados de forma bruta, como logs de sintomas e histórico médico, imagens de exames e dados clínicos complexos que possam ser usados para análise futura. Seria adequado para armazenar dados não estruturados e estruturados, permitindo análises com ferramentas de Machine Learning.
+## NOSQL(MongoDB)
+
+db.animais.insertOne({
+  "animal_id": "A12345",
+  "nome": "Rex",
+  "especie": "Cachorro",
+  "raca": "Pastor Alemão",
+  "idade": 5,
+  "historico_medico": [
+    {
+      "data": "2024-07-01",
+      "sintomas": ["tosse", "febre"],
+      "diagnostico": "Infecção respiratória",
+      "tratamento": "Antibiótico",
+      "veterinario": "Dr. João"
+    }
+  ]
+});
+
+## Consulta de um animal pelo nome:
+
+db.animais.find({ "nome": "Rex" });
+
+## e. Justificativa da Escolha para AP, Data Warehouse, Data Lake ou Data Lakehouse 
+
+A escolha de um Data Lakehouse é ideal para este cenário. Ele combina a flexibilidade e escalabilidade de um Data Lake, que pode armazenar dados estruturados e não estruturados de forma eficiente (como registros de consultas em JSON e históricos médicos variados), com a capacidade de Data Warehousing, permitindo análises preditivas complexas e consultas rápidas. Assim, é possível ter o melhor de ambos os mundos, facilitando a ingestão de grandes volumes de dados sobre animais e donos, bem como análises detalhadas para prever doenças e sugerir tratamentos.
+
+
