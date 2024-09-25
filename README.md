@@ -98,6 +98,7 @@ db.animais.find({ "nome": "Rex" });
 
 ## e. Justificativa da Escolha para AP, Data Warehouse, Data Lake ou Data Lakehouse 
 
-A escolha de um Data Lakehouse é ideal para este cenário. Ele combina a flexibilidade e escalabilidade de um Data Lake, que pode armazenar dados estruturados e não estruturados de forma eficiente (como registros de consultas em JSON e históricos médicos variados), com a capacidade de Data Warehousing, permitindo análises preditivas complexas e consultas rápidas. Assim, é possível ter o melhor de ambos os mundos, facilitando a ingestão de grandes volumes de dados sobre animais e donos, bem como análises detalhadas para prever doenças e sugerir tratamentos.
+## A escolha de um Data Lakehouse é ideal para este cenário. 
+Ele combina a flexibilidade e escalabilidade de um Data Lake, que pode armazenar dados estruturados e não estruturados de forma eficiente (como registros de consultas em JSON e históricos médicos variados), com a capacidade de Data Warehousing, permitindo análises preditivas complexas e consultas rápidas. Assim, é possível ter o melhor de ambos os mundos, facilitando a ingestão de grandes volumes de dados sobre animais e donos, bem como análises detalhadas para prever doenças e sugerir tratamentos.
 
 
