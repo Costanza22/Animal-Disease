@@ -1,3 +1,5 @@
+
+
 ---
 
 ## a. Domínio de Problema
@@ -188,5 +190,5 @@ plt.xlabel('Idade')
 plt.ylabel('Frequência')
 plt.show()
 ```
-![photo4](https://github.com/user-attachments/assets/a9caf792-1169-404c-a8d4-7a857687cc88)
 
+---
