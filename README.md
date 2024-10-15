@@ -7,6 +7,9 @@
 O problema envolve a previsão de doenças em animais de estimação, como cães e gatos, a partir de sintomas relatados por tutores. Esses sintomas podem incluir febre, tosse, perda de apetite, entre outros. A previsão de doenças é crucial para permitir diagnósticos precoces em clínicas veterinárias, ajudando a identificar possíveis condições, como infecções, alergias ou viroses, com base em dados coletados dos animais.
 
 ![dog6](https://github.com/user-attachments/assets/d57ee2d3-12f9-4eb1-835b-68243bf25696)
+
+## Acesso
+
 Google Collab !(https://colab.research.google.com/drive/1m3Dn-49iTqdczO4kkfMqZp6z5p6uwifX?usp=sharing)
 
 ## Justificativa para a Análise Preditiva
