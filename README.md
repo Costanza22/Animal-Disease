@@ -10,7 +10,7 @@ O problema envolve a previsão de doenças em animais de estimação, como cães
 
 ## Acesso
 
-Google Collab !(https://colab.research.google.com/drive/1m3Dn-49iTqdczO4kkfMqZp6z5p6uwifX?usp=sharing)
+Google Collab !([https://colab.research.google.com/drive/1m3Dn-49iTqdczO4kkfMqZp6z5p6uwifX?usp=sharing](https://colab.research.google.com/drive/1veSoQHIn4erGyGDNH06iZZEnK0oyBFYP))
 
 ## Justificativa para a Análise Preditiva
 
